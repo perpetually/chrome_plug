@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>popup页</title>
+	<meta charset="utf-8"/>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<style>
+	body {
+		font-family: 'Microsoft Yahei';
+		width: 450px;
+		min-height: 100px;
+	}
+	a {margin-right: 10px;}
+	h1,h2{
+		line-height:30px;
+		text-align: center;
+	}
+	h2 img{
+		width: 30px;vertical-align: top;margin-right: 5px;
+	}
+	p{
+		color: #666;
+	}
+	b{
+		color: red;
+	}
+	.red{
+		color:red;
+	}
+	.font16{
+		font-size:16px;
+	}
+	.text_content{
+		padding: 10px 20px 20px
+	}
+	.hide{
+		display: none;
+	}
+	.btn{
+		background: #409eff;border-radius: 4px;border-color:#409eff;color:#fff;
+		box-shadow: none;
+		outline: none;
+		margin-right: 15px;
+		border-style: none;
+		padding: 6px 8px;
+		cursor: pointer;
+	}
+	.btn.input-btn{
+		border: none;
+		background: #fff;
+		color: #409eff;
+	}
+	.btn.btn-red{
+		background: #f40;
+	}
+	.btn.btn-upload{
+		background: #e6a23c;
+	}
+	.btn.btn-default{
+		background: #fff;
+		border: 1px solid #dcdfe6;
+		color: #606266;
+	}
+	.btn.btn-info{
+		background: #ff7f00;
+	}
+	.input{
+		width: 100px;
+		border: none;
+	}
+	.bottom{
+		margin-top: 15px;
+	}
+	.bottom > div{
+		margin-bottom: 10px;
+	}
+	.top{
+		margin-top: 3px;
+	}
+	</style>
+	<link rel="stylesheet" href="./css/custom.css">
+</head>
+<body>
+	<h2><img src="./img/icon.png" alt=""> 订单拍拍插件</h2>
+	<div class="text_content">
+		<div>注意事项</div>
+		<p>1.第一次必须输入 <b>手机号</b> 登录淘宝</p>
+		<p>2.必须保证一个淘宝或相关页面打开</p>
+		<p>3.进入淘宝页面后插件会正常工作，有小提示</p>
+		<p>4.如果插件提醒掉线请点击我的淘宝查看是否掉线，并重新登录</p>
+		<p>5.插件提醒异常，请先刷新重试，如果不行就重新登录</p>
+		<p>6.下次登录是可以使用淘宝账号登录，如果插件有提醒则换成手机号</p>
+		<p class="hide">淘宝账号：<span id="taoBaoAccount"></span></p>
+		<div class="red font16">
+			登录手机号为：<input id="phone" type="text" readonly class="input"/>
+			<input type="button" id="invoke_background_js" value="点击复制" class="btn input-btn"/>
+
+		</div>
+		<div class="bottom">
+			<div>
+				<button id="open_url_current_tab1" class="btn btn-info">淘宝首页</button>
+				<button id="open_url_current_tab2" class="btn btn-red">我的淘宝</button>
+				<button id="open_url_current_tab3" class="btn btn-red">已买到的宝贝</button>
+				<button id="open_url_current_tab" class="btn btn-upload">淘宝登录</button>
+			</div>
+
+			<div>
+				<button id="get_current_tab_id" class="btn btn-default">一键刷新</button>
+				<button id="show_notification" class="btn btn-default">关闭所有通知</button>
+				<button id="clear_btn" class="btn btn-default">清除缓存账号</button>
+			</div>
+
+			<div class="input_wrap">
+				<input type="text" class="input-name" id="add_text" placeholder="请输入用户名"/>
+				<button id="add_btn" class="btn btn-info top">新增用户名</button>
+				<button id="query_btn" class="btn">查看</button>
+			</div>
+		</div>
+		<ul id="account_ul"></ul>
+	</div>
+	<script type="text/javascript" src="js/jquery-1.8.3.js"></script>
+	<script type="text/javascript" src="js/popup.js"></script>
+</body>
+</html>
