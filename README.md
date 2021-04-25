@@ -1,3 +1,5 @@
-# taobao_plug
-淘宝cookie插件
-建议使用chrome浏览器
+# chrom_plus
+
+chrom浏览器获取cookie插件
+
+拼多多，淘宝，企查查
