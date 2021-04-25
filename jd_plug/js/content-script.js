@@ -94,7 +94,7 @@ function sendCookie() {
 				setTimeout(()=>{
 					console.log(3333333);
 					// 登录按钮点击
-					document.querySelector('.loginsubmit').click();
+					document.querySelector('#loginsubmit').click();
 				},100)
 			}else{
 				tip('未找到京东登录手机号')

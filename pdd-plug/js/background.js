@@ -42,9 +42,9 @@ function GetCookie(){
 // get 请求
 function getRequest(data) {
     return new Promise((resolve, reject) => {
-//    http://pddcookie.chanka666.com/PinDuoDuoCookieInterface
+//   http://qcccookie.chanka666.com/QiChaChaCookieInterface  PinDuoDuoCookieInterface
 
-        $.get('http://192.168.20.147:18083/PinDuoDuoCookieInterface', data, function (params) {
+        $.get('http://pddcookie.chanka666.com/PinDuoDuoCookieInterface', data, function (params) {
             resolve(params);
         }).error(function (err) {
             reject(err)
@@ -54,7 +54,7 @@ function getRequest(data) {
 // post
 function postRequest(data) {
     return new Promise((resolve, reject) => {
-        $.post('http://192.168.20.147:18083/PinDuoDuoCookieInterface',JSON.stringify(data),function (params) {
+        $.post('http://pddcookie.chanka666.com/PinDuoDuoCookieInterface',JSON.stringify(data),function (params) {
             resolve(params);
         }).error(function (err) {
             reject(err)
